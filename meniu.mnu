@@ -1,0 +1,333 @@
+** END HEADER -- do not remove this line
+//
+// Generated on 05/15/2022
+//
+parameter formObj
+new MENIUMENU(formObj, "root")
+
+class MENIUMENU(formObj, name) of MENUBAR(formObj, name)
+   this.MENU62 = new MENU(this)
+   with (this.MENU62)
+      text = "&Edit"
+   endwith
+
+   this.MENU62.UNDO = new MENU(this.MENU62)
+   with (this.MENU62.UNDO)
+      text = "&Undo"
+      shortCut = "Ctrl+Z"
+   endwith
+
+   this.MENU62.CUT = new MENU(this.MENU62)
+   with (this.MENU62.CUT)
+      text = "Cu&t"
+      shortCut = "Ctrl+X"
+   endwith
+
+   this.MENU62.COPY = new MENU(this.MENU62)
+   with (this.MENU62.COPY)
+      text = "&Copy"
+      shortCut = "Ctrl+C"
+   endwith
+
+   this.MENU62.PASTE = new MENU(this.MENU62)
+   with (this.MENU62.PASTE)
+      text = "&Paste"
+      shortCut = "Ctrl+V"
+   endwith
+
+   this.MENU67 = new MENU(this)
+   with (this.MENU67)
+      text = "&Window"
+   endwith
+
+   this.MENU68 = new MENU(this)
+   with (this.MENU68)
+      text = "&CRUD"
+   endwith
+
+   this.MENU68.MENU81 = new MENU(this.MENU68)
+   with (this.MENU68.MENU81)
+      onClick = {;append}
+      text = "&Create"
+   endwith
+
+   this.MENU68.MENU81.MENU16 = new MENU(this.MENU68.MENU81)
+   with (this.MENU68.MENU81.MENU16)
+      onClick = class::MENU16_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU68.MENU81.MENU17 = new MENU(this.MENU68.MENU81)
+   with (this.MENU68.MENU81.MENU17)
+      onClick = class::MENU17_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU68.MENU82 = new MENU(this.MENU68)
+   with (this.MENU68.MENU82)
+      onClick = {;list}
+      text = "&Read"
+   endwith
+
+   this.MENU68.MENU82.MENU19 = new MENU(this.MENU68.MENU82)
+   with (this.MENU68.MENU82.MENU19)
+      onClick = class::MENU19_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU68.MENU82.MENU20 = new MENU(this.MENU68.MENU82)
+   with (this.MENU68.MENU82.MENU20)
+      onClick = class::MENU20_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU68.MENU83 = new MENU(this.MENU68)
+   with (this.MENU68.MENU83)
+      onClick = {;edit}
+      text = "&Update"
+   endwith
+
+   this.MENU68.MENU83.MENU21 = new MENU(this.MENU68.MENU83)
+   with (this.MENU68.MENU83.MENU21)
+      onClick = class::MENU21_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU68.MENU83.MENU22 = new MENU(this.MENU68.MENU83)
+   with (this.MENU68.MENU83.MENU22)
+      onClick = class::MENU22_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU68.MENU84 = new MENU(this.MENU68)
+   with (this.MENU68.MENU84)
+      onClick = {;delete}
+      text = "&Delete"
+   endwith
+
+   this.MENU68.MENU84.MENU24 = new MENU(this.MENU68.MENU84)
+   with (this.MENU68.MENU84.MENU24)
+      onClick = class::MENU24_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU68.MENU84.MENU25 = new MENU(this.MENU68.MENU84)
+   with (this.MENU68.MENU84.MENU25)
+      onClick = class::MENU25_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU70 = new MENU(this)
+   with (this.MENU70)
+      text = "&Navigate"
+   endwith
+
+   this.MENU70.MENU85 = new MENU(this.MENU70)
+   with (this.MENU70.MENU85)
+      onClick = {;skip}
+      text = "&Next"
+   endwith
+
+   this.MENU70.MENU86 = new MENU(this.MENU70)
+   with (this.MENU70.MENU86)
+      onClick = {;skip-1}
+      text = "&Prev"
+   endwith
+
+   this.MENU49 = new MENU(this)
+   with (this.MENU49)
+      text = "&Misc."
+   endwith
+
+   this.MENU49.MENU50 = new MENU(this.MENU49)
+   with (this.MENU49.MENU50)
+      text = "&Set Delete"
+   endwith
+
+   this.MENU49.MENU50.MENU51 = new MENU(this.MENU49.MENU50)
+   with (this.MENU49.MENU50.MENU51)
+      onClick = class::MENU51_ONCLICK
+      text = "&On"
+   endwith
+
+   this.MENU49.MENU50.MENU52 = new MENU(this.MENU49.MENU50)
+   with (this.MENU49.MENU50.MENU52)
+      onClick = class::MENU52_ONCLICK
+      text = "&Off"
+   endwith
+
+   this.MENU49.MENU39 = new MENU(this.MENU49)
+   with (this.MENU49.MENU39)
+      text = "&Pack"
+   endwith
+
+   this.MENU49.MENU39.MENU40 = new MENU(this.MENU49.MENU39)
+   with (this.MENU49.MENU39.MENU40)
+      onClick = class::MENU40_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU49.MENU39.MENU41 = new MENU(this.MENU49.MENU39)
+   with (this.MENU49.MENU39.MENU41)
+      onClick = class::MENU41_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU49.MENU53 = new MENU(this.MENU49)
+   with (this.MENU49.MENU53)
+      text = "&Browse"
+   endwith
+
+   this.MENU49.MENU53.MENU58 = new MENU(this.MENU49.MENU53)
+   with (this.MENU49.MENU53.MENU58)
+      onClick = class::MENU58_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU49.MENU53.MENU59 = new MENU(this.MENU49.MENU53)
+   with (this.MENU49.MENU53.MENU59)
+      onClick = class::MENU59_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU49.MENU56 = new MENU(this.MENU49)
+   with (this.MENU49.MENU56)
+      text = "&Seek"
+   endwith
+
+   this.MENU49.MENU56.MENU60 = new MENU(this.MENU49.MENU56)
+   with (this.MENU49.MENU56.MENU60)
+      onClick = class::MENU60_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU49.MENU56.MENU61 = new MENU(this.MENU49.MENU56)
+   with (this.MENU49.MENU56.MENU61)
+      onClick = class::MENU61_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU49.MENU57 = new MENU(this.MENU49)
+   with (this.MENU49.MENU57)
+      onClick = class::MENU57_ONCLICK
+      text = "&Sort"
+   endwith
+
+   this.MENU49.MENU57.MENU62 = new MENU(this.MENU49.MENU57)
+   with (this.MENU49.MENU57.MENU62)
+      onClick = class::MENU62_ONCLICK
+      text = "&Medicament"
+   endwith
+
+   this.MENU49.MENU57.MENU63 = new MENU(this.MENU49.MENU57)
+   with (this.MENU49.MENU57.MENU63)
+      onClick = class::MENU63_ONCLICK
+      text = "&Farmacie"
+   endwith
+
+   this.MENU49.MENU37 = new MENU(this.MENU49)
+   with (this.MENU49.MENU37)
+      onClick = class::MENU37_ONCLICK
+      text = "&Stock"
+   endwith
+
+   this.windowMenu = this.menu67
+   this.editCutMenu = this.menu62.cut
+   this.editCopyMenu = this.menu62.copy
+   this.editPasteMenu = this.menu62.paste
+   this.editUndoMenu = this.menu62.undo
+
+   function MENU16_onClick
+      use medicament
+      append
+      return
+
+   function MENU17_onClick
+      use farmacie
+      append
+      return
+
+   function MENU19_onClick
+      use medicament
+      list
+      return
+
+   function MENU20_onClick
+      use farmacie
+      list
+      return
+
+   function MENU21_onClick
+      use medicament
+      edit
+      return
+
+   function MENU22_onClick
+      use farmacie
+      edit
+      return
+
+   function MENU24_onClick
+      use medicament 
+      delete
+      return
+
+   function MENU25_onClick
+      use farmacie
+      delete
+      return
+
+   function MENU37_onClick
+      do stock.prg
+      return
+
+   function MENU40_onClick
+      use medicament exclusive
+      pack
+      return
+
+   function MENU41_onClick
+      use farmacie exclusive 
+      pack
+      return
+
+   function MENU51_onClick
+      set delete on
+      return
+
+   function MENU52_onClick
+      set delete off
+      return
+
+   function MENU57_onClick
+      
+      return
+
+   function MENU58_onClick
+      use medicament
+      browse
+      return
+
+   function MENU59_onClick
+      use farmacie
+      browse
+      return
+
+   function MENU60_onClick
+      do seek_m.prg
+      return
+
+   function MENU61_onClick
+      do seek_f.prg
+      return
+
+   function MENU62_onClick
+      do sort_m.prg
+      return
+
+   function MENU63_onClick
+      do sort_f.prg
+      return
+
+endclass
+

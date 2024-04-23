@@ -1,0 +1,126 @@
+** END HEADER -- do not remove this line
+//
+// Generated on 05/14/2022
+//
+parameter bModal
+local f
+f = new pozaForm()
+if (bModal)
+   f.mdi = false // ensure not MDI
+   f.readModal()
+else
+   f.open()
+endif
+
+class pozaForm of FORM
+   with (this)
+      onOpen = class::FORM_ONOPEN
+      onClose = class::FORM_ONCLOSE
+      colorNormal = "0xffcd9b"
+      height = 17.0909
+      left = 117.0
+      top = 0.0
+      width = 40.0
+      text = ""
+      menuFile = "meniu.mnu"
+   endwith
+
+   this.IMAGE1 = new IMAGE(this)
+   with (this.IMAGE1)
+      height = 12.5
+      left = 1.0
+      top = 0.5
+      width = 38.0
+   endwith
+
+   this.ENTRYFIELD1 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD1)
+      height = 1.0
+      left = 20.0
+      top = 14.0
+      width = 18.0
+      colorNormal = "black/0xffcd9b"
+      colorHighLight = "black/0xffcd9b"
+      fontName = "Times New Roman"
+      fontSize = 12.0
+      fontItalic = true
+      value = "Entryfield1"
+      borderStyle = 3	// None
+   endwith
+
+   this.TEXTLABEL1 = new TEXTLABEL(this)
+   with (this.TEXTLABEL1)
+      height = 1.0
+      left = 1.0
+      top = 14.0
+      width = 19.0
+      text = "Nume Farmacie"
+      colorNormal = "black/0xffcd9b"
+      fontName = "Times New Roman"
+      fontSize = 12.0
+      fontBold = true
+   endwith
+
+   this.PUSHBUTTON2 = new PUSHBUTTON(this)
+   with (this.PUSHBUTTON2)
+      onClick = {;skip}
+      height = 1.0909
+      left = 31.0
+      top = 15.5
+      width = 8.2857
+      text = "Next"
+      fontName = "Times New Roman"
+      fontSize = 12.0
+      borderStyle = 4	// Single
+      colorNormal = "black"
+   endwith
+
+   this.PUSHBUTTON3 = new PUSHBUTTON(this)
+   with (this.PUSHBUTTON3)
+      onClick = class::PUSHBUTTON3_ONCLICK
+      height = 1.0909
+      left = 15.0
+      top = 15.5
+      width = 10.0
+      text = "Close"
+      fontName = "Times New Roman"
+      fontSize = 12.0
+      borderStyle = 4	// Single
+      colorNormal = "black"
+   endwith
+
+   this.PUSHBUTTON1 = new PUSHBUTTON(this)
+   with (this.PUSHBUTTON1)
+      onClick = {;skip-1}
+      height = 1.0909
+      left = 1.0
+      top = 15.5
+      width = 8.2857
+      text = "Prev"
+      fontName = "Times New Roman"
+      fontSize = 12.0
+      borderStyle = 4	// Single
+      colorNormal = "black"
+   endwith
+
+
+   function PUSHBUTTON1_onClick
+      
+      return
+
+   function PUSHBUTTON3_onClick
+      form.close()
+      return
+
+   function form_onClose
+      close database
+      return
+
+   function form_onOpen
+      use farmacie
+      form.entryfield1.datalink = 'nume'
+      form.image1.datasource = 'binary poza'
+      return
+
+endclass
+
